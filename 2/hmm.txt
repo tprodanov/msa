@@ -1,0 +1,14 @@
+# Hidden states count
+2
+# Observed states count
+2
+# Initial probabilities
+0.996 0.004
+# Transition probabilities
+0.999 0.001
+0.01 0.99
+# Emission probabilities
+0.291 0.209
+0.169 0.331
+
+
