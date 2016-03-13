@@ -1,0 +1,329 @@
+=============================
+========== Viterbi ==========
+=============================
+Log probability: -747797.904365
+Segments: 95
+
+
+=============================
+======= Viterbi Train =======
+=============================
+After iteration 1
+	Log probability: -746836.369176
+	Segments: 23
+	Transitions:
+		0.999956		0.000044
+		0.004385		0.995615
+After iteration 2
+	Log probability: -746808.803638
+	Segments: 15
+	Transitions:
+		0.999990		0.000010
+		0.002266		0.997734
+After iteration 3
+	Log probability: -746807.470884
+	Segments: 13
+	Transitions:
+		0.999993		0.000007
+		0.001808		0.998192
+After iteration 4
+	Log probability: -746807.318239
+	Segments: 13
+	Transitions:
+		0.999994		0.000006
+		0.001546		0.998454
+After iteration 5
+	Log probability: -746807.318239
+	Segments: 13
+	Transitions:
+		0.999994		0.000006
+		0.001546		0.998454
+Segments:
+	AT	1	0	275666
+	CG	2	275667	276363
+	AT	3	276364	666684
+	CG	4	666685	667661
+	AT	5	667662	669450
+	CG	6	669451	670312
+	AT	7	670313	746323
+	CG	8	746324	746562
+	AT	9	746563	952633
+	CG	10	952634	953263
+	AT	11	953264	1023943
+	CG	12	1023944	1024418
+	AT	13	1024419	1072135
+
+
+=============================
+======== Baum-Welch =========
+=============================
+After iteration 0
+	Log probability: -745704.533103
+	Initial:
+		0.996000	0.004000
+	Transitions:
+		0.999000	0.001000
+		0.010000	0.990000
+	Emission:
+		0.582000	0.418000
+		0.338000	0.662000
+After iteration 1
+	Log probability: -741180.153834
+	Initial:
+		0.999718	0.000282
+	Transitions:
+		0.998813	0.001187
+		0.015343	0.984657
+	Emission:
+		0.541151	0.458849
+		0.397162	0.602838
+After iteration 2
+	Log probability: -741014.104783
+	Initial:
+		0.999962	0.000038
+	Transitions:
+		0.998920	0.001080
+		0.016692	0.983308
+	Emission:
+		0.537832	0.462168
+		0.422259	0.577741
+After iteration 3
+	Log probability: -740955.107296
+	Initial:
+		0.999993	0.000007
+	Transitions:
+		0.998922	0.001078
+		0.015415	0.984585
+	Emission:
+		0.537437	0.462563
+		0.436001	0.563999
+After iteration 4
+	Log probability: -740896.654513
+	Initial:
+		0.999999	0.000001
+	Transitions:
+		0.998888	0.001112
+		0.013384	0.986616
+	Emission:
+		0.537925	0.462075
+		0.445165	0.554835
+After iteration 5
+	Log probability: -740820.672615
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998833	0.001167
+		0.011180	0.988820
+	Emission:
+		0.539004	0.460996
+		0.452300	0.547700
+After iteration 6
+	Log probability: -740718.389363
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998764	0.001236
+		0.009056	0.990944
+	Emission:
+		0.540666	0.459334
+		0.458599	0.541401
+After iteration 7
+	Log probability: -740584.374364
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998686	0.001314
+		0.007146	0.992854
+	Emission:
+		0.542976	0.457024
+		0.464622	0.535378
+After iteration 8
+	Log probability: -740418.094843
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998609	0.001391
+		0.005515	0.994485
+	Emission:
+		0.546007	0.453993
+		0.470538	0.529462
+After iteration 9
+	Log probability: -740226.769922
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998543	0.001457
+		0.004186	0.995814
+	Emission:
+		0.549788	0.450212
+		0.476278	0.523722
+After iteration 10
+	Log probability: -740025.451102
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998499	0.001501
+		0.003147	0.996853
+	Emission:
+		0.554248	0.445752
+		0.481683	0.518317
+After iteration 11
+	Log probability: -739833.188859
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998484	0.001516
+		0.002361	0.997639
+	Emission:
+		0.559193	0.440807
+		0.486594	0.513406
+After iteration 12
+	Log probability: -739667.140172
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998501	0.001499
+		0.001785	0.998215
+	Emission:
+		0.564326	0.435674
+		0.490905	0.509095
+After iteration 13
+	Log probability: -739537.053650
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998541	0.001459
+		0.001373	0.998627
+	Emission:
+		0.569319	0.430681
+		0.494573	0.505427
+After iteration 14
+	Log probability: -739443.872307
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998593	0.001407
+		0.001085	0.998915
+	Emission:
+		0.573888	0.426112
+		0.497613	0.502387
+After iteration 15
+	Log probability: -739382.055390
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998645	0.001355
+		0.000885	0.999115
+	Emission:
+		0.577852	0.422148
+		0.500072	0.499928
+After iteration 16
+	Log probability: -739343.495277
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998691	0.001309
+		0.000748	0.999252
+	Emission:
+		0.581148	0.418852
+		0.502020	0.497980
+After iteration 17
+	Log probability: -739320.612016
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998728	0.001272
+		0.000654	0.999346
+	Emission:
+		0.583808	0.416192
+		0.503528	0.496472
+After iteration 18
+	Log probability: -739307.575894
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998755	0.001245
+		0.000590	0.999410
+	Emission:
+		0.585906	0.414094
+		0.504673	0.495327
+After iteration 19
+	Log probability: -739300.378258
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998773	0.001227
+		0.000547	0.999453
+	Emission:
+		0.587535	0.412465
+		0.505526	0.494474
+After iteration 20
+	Log probability: -739296.483601
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998783	0.001217
+		0.000517	0.999483
+	Emission:
+		0.588788	0.411212
+		0.506155	0.493845
+After iteration 21
+	Log probability: -739294.392957
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998788	0.001212
+		0.000498	0.999502
+	Emission:
+		0.589750	0.410250
+		0.506615	0.493385
+After iteration 22
+	Log probability: -739293.264965
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998788	0.001212
+		0.000485	0.999515
+	Emission:
+		0.590491	0.409509
+		0.506950	0.493050
+After iteration 23
+	Log probability: -739292.644588
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998785	0.001215
+		0.000476	0.999524
+	Emission:
+		0.591067	0.408933
+		0.507194	0.492806
+After iteration 24
+	Log probability: -739292.291719
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998780	0.001220
+		0.000471	0.999529
+	Emission:
+		0.591519	0.408481
+		0.507372	0.492628
+After iteration 25
+	Log probability: -739292.081368
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998773	0.001227
+		0.000468	0.999532
+	Emission:
+		0.591878	0.408122
+		0.507504	0.492496
+After iteration 26
+	Log probability: -739291.948711
+	Initial:
+		1.000000	0.000000
+	Transitions:
+		0.998767	0.001233
+		0.000466	0.999534
+	Emission:
+		0.592168	0.407832
+		0.507601	0.492399
