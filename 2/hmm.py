@@ -49,21 +49,22 @@ class Model:
             model.emission[i] = [eln.ln(float(x)) for x in next(file).split()]
         return model
 
-    def print(self, file):
-
-        file.write('Initial:\n')
+    def print(self, file, tabs):
+        line_start = '\t' * tabs
+        file.write('%sInitial:\n%s' % (line_start, line_start))
         for initial in self.initial:
             file.write('\t%f' % eln.exp(initial))
         file.write('\n')
 
-        file.write('Transitions:\n')
+        file.write('%sTransitions:\n%s' % (line_start, line_start))
         for outer in self.transitions:
             for transition in outer:
                 file.write('\t%f' % eln.exp(transition))
-            file.write('\n')
+            file.write('\n%s' % line_start)
 
         file.write('Emission:\n')
         for outer in self.emission:
+            file.write(line_start)
             for emission in outer:
                 file.write('\t%f' % eln.exp(emission))
             file.write('\n')

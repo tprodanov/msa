@@ -21,13 +21,13 @@ def get_intervals(seq):
 def main():
     parser = argparse.ArgumentParser(prog='MSA 2')
     parser.add_argument('-f', '--fasta', type=argparse.FileType('r'))
-    parser.add_argument('-o', '--output', type=argparse.FileType('w'))
     parser.add_argument('-m', '--hmm', type=argparse.FileType('r'))
-    parser.add_argument('-s', '--segments', type=argparse.FileType('w'))
+    parser.add_argument('-o', '--output', type=argparse.FileType('w'))
 
-    args = parser.parse_args(['-f', 'vibrio.chrII.fa', '-o', 'output.txt', '-m', 'hmm.txt', '-s', 'cg_segments.csv'])
+    args = parser.parse_args(['-f', 'vibrio.chrII.fa', '-m', 'hmm.txt', '-o', 'output.txt'])
     input_seq = fa.read_fasta(args.fasta)[0][1]
-    observations = [0 if nucl == 'A' or nucl == 'T' else 1 for nucl in input_seq]
+    state = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
+    observations = [state[nt] for nt in input_seq]
 
     hmm_file = args.hmm
     model = hmm.Model.load(hmm_file)
@@ -35,7 +35,7 @@ def main():
     viterbi(observations, model, output)
     output.flush()
     print('viterbi train')
-    viterbi_train(observations, model, output, args.segments)
+    viterbi_train(observations, model, output)
     output.flush()
 
     print('baum')
@@ -59,7 +59,7 @@ def viterbi(observations, model, output):
     return states
 
 
-def viterbi_train(observations, model, output, segments):
+def viterbi_train(observations, model, output):
     output.write('=============================\n')
     output.write('======= Viterbi Train =======\n')
     output.write('=============================\n')
@@ -83,12 +83,12 @@ def viterbi_train(observations, model, output, segments):
             output.write('\n')
         output.flush()
 
-    segments.write('no\tbegin\tend\n')
-    i = 0
+    output.write('Segments:\n')
+    i = 1
     for begin, end, value in get_intervals(states):
-        segments.write('%s\t%d\t%d\t%d\n' % ('CG' if value else 'AT', i, begin, end))
+        output.write('\t%s\t%d\t%d\t%d\n' % ('CG' if value else 'AT', i, begin, end))
         i += 1
-    segments.flush()
+    output.flush()
     output.write('\n\n')
 
 
@@ -104,7 +104,7 @@ def baum_welch(observations, model, output):
         output.write('After iteration %d\n' % i)
         i += 1
         output.write('\tLog probability: %f\n' % probability)
-        model.print(output)
+        model.print(output, 1)
         output.flush()
         model.baum_welch(observations, alpha, beta, gamma, probability)
 
