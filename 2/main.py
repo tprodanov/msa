@@ -110,6 +110,10 @@ def baum_welch(observations, model, output):
 
         previous_probability = probability
         alpha, beta, gamma, probability = model.backward_forward(observations)
+    output.write('After iteration %d\n' % i)
+    output.write('\tLog probability: %f\n' % probability)
+    model.print(output, 1)
+    output.flush()
 
 
 if __name__ == '__main__':
